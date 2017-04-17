@@ -12,16 +12,17 @@ import java.util.Properties;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.ListModel;
 import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -71,7 +72,9 @@ public class MainFrame extends javax.swing.JFrame {
             slideLeft();
         } catch (NullPointerException e) {
         	e.printStackTrace();
-            System.out.println("Fill in all inputs");
+        	ImageIcon p = new ImageIcon(getClass().getResource("/icons/warning.png"));
+            JOptionPane.showMessageDialog(null, "Fill in all inputs", 
+                    "Warning:", JOptionPane.WARNING_MESSAGE,p);
         }
     }
     
@@ -97,9 +100,9 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void generateComboboxModel() {
         DefaultComboBoxModel dbm = new DefaultComboBoxModel();
-        List<Airport> airports = manager.getFlightGenerator().getAirports();
+        List<flight.Airport> airports = manager.getFlightGenerator().getAirports();
         Collections.sort(airports);
-        for (Airport ap : airports) {
+        for (flight.Airport ap : airports) {
             String name = ap.getName() + " (" + ap.getAirportCode() + "), " + ap.getCountry();
             dbm.addElement(name);
         }

@@ -9,7 +9,9 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Vector;
+
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 import flight.Flight;
 import flight.FlightGenerator;
@@ -71,7 +73,7 @@ public class PackageManager {
 	public List<Flight> searchFlights(Date departureDate, String origin, String destination) {
 		int travellers = packageInMaking.getTravellers();
 		if(departureDate == null) {
-			throw new IllegalArgumentException("Please select both the dates of arrival and return");
+			//throw new IllegalArgumentException("Please select both the dates of arrival and return");
 		}
 		return fsearch.search(departureDate, origin, destination, travellers);
 	}	
