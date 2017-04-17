@@ -22,7 +22,7 @@ public class HotelStorage {
 
 	private Connection connect() 
 	{
-		String url = "jdbc:sqlite:lib/1H.db";
+		String url = "jdbc:sqlite:library/1H.db";
 		Connection conn = null;
 		try
 		{
