@@ -111,7 +111,7 @@ public class FlightGenerator {
                 
                 int booked = (int) (Math.random()*numberOfSeats) + 1;
                 int available = numberOfSeats - booked; 
-                int price = (int) (Math.random()*1001); 
+                int price = (int) (Math.random()*100001) + 20000; 
                 
                 String from = ap.getName() + " (" + ap.getAirportCode() + "), " + ap.getCountry();
                 String to = "Keflavik International Airport (KEF), Iceland";
@@ -141,7 +141,7 @@ public class FlightGenerator {
                 
                 int booked = (int) (Math.random()*numberOfSeats) + 1;
                 int available = numberOfSeats - booked; 
-                int price = (int) (Math.random()*1001); 
+                int price = (int) (Math.random()*100001) + 20000;
                 
                 String from = ap.getName() + " (" + ap.getAirportCode() + "), " + ap.getCountry();
                 String to = "Keflavik International Airport (KEF), Iceland";
