@@ -1,10 +1,9 @@
 package src;
-import java.util.Vector;
-import hotel.*;
-import tour.DayTour;
-import flight.*;
-
+import java.util.ArrayList;
+import java.util.List;
 import flight.Flight;
+import hotel.Hotel;
+import tour.DayTour;
 
 public class TravelPackage {
 	
@@ -13,7 +12,7 @@ public class TravelPackage {
 	private Flight outbound;
 	private Flight inbound;
 	private Hotel hotel;
-	private Vector<DayTour> tours;
+	private ArrayList<DayTour> tours;
 	Customer customer;
 	
 	/* Default constructor */
@@ -39,7 +38,7 @@ public class TravelPackage {
 		return hotel;
 	}
 
-	public Vector<DayTour> getDayTours() {
+	public List<DayTour> getDayTours() {
 		return tours;
 	}
 
