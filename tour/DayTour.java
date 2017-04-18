@@ -23,11 +23,8 @@ public class DayTour {
 		this.location = location;
 		this.availableSeats = availableSeats;
 		this.price = price;
-		// SimpleDateFormat format = new SimpleDateFormat("ddMMyyyy");
-		// this.time = format.parse(date + time);
 		this.time = Integer.parseInt(time);
 		this.date = Integer.parseInt(date);
-		
 	}
 	/* Instance methods */
 	public String getNameOfTrip() {
