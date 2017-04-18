@@ -73,7 +73,7 @@ public class PackageManager {
 	public List<Flight> searchFlights(Date departureDate, String origin, String destination) {
 		int travellers = packageInMaking.getTravellers();
 		if(departureDate == null) {
-			//throw new IllegalArgumentException("Please select both the dates of arrival and return");
+			throw new IllegalArgumentException("Please select both the dates of arrival and return");
 		}
 		return fsearch.search(departureDate, origin, destination, travellers);
 	}	
